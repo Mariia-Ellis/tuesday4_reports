@@ -1,4 +1,4 @@
-# Projectt Reports
+# Project Reports
 
 Mariia Ellis
 
