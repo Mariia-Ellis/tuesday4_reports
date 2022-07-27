@@ -1,0 +1,164 @@
+
+------------------------------------------------------------
+Root project 'webanalysis'
+------------------------------------------------------------
+
+allprojects: [root project 'webanalysis', project ':app']
+ant: org.gradle.api.internal.project.DefaultAntBuilder@5cd4a47e
+antBuilderFactory: org.gradle.api.internal.project.DefaultAntBuilderFactory@1b5629ef
+application: extension 'application'
+applicationDefaultJvmArgs: []
+applicationDistribution: org.gradle.api.internal.file.copy.DefaultCopySpec_Decorated@7b2f4fc0
+applicationName: webanalysis
+archivesBaseName: webanalysis
+artifacts: org.gradle.api.internal.artifacts.dsl.DefaultArtifactHandler_Decorated@3c172ea4
+asDynamicObject: DynamicObject for root project 'webanalysis'
+autoTargetJvmDisabled: false
+bake: task ':bake'
+base: extension 'base'
+baseClassLoaderScope: org.gradle.api.internal.initialization.DefaultClassLoaderScope@45999a0c
+buildDir: /Users/mariiavorobeva/Desktop/tuesday4/cs350-team4/build
+buildFile: /Users/mariiavorobeva/Desktop/tuesday4/cs350-team4/build.gradle
+buildHomePage: task ':buildHomePage'
+buildPath: :
+buildScriptSource: org.gradle.groovy.scripts.TextResourceScriptSource@6faaca01
+buildscript: org.gradle.api.internal.initialization.DefaultScriptHandler@6efac97b
+check: task ':check'
+checkstyle: extension 'checkstyle'
+checkstyleMain: task ':checkstyleMain'
+checkstyleTest: task ':checkstyleTest'
+childProjects: {app=project ':app'}
+class: class org.gradle.api.internal.project.DefaultProject_Decorated
+classLoaderScope: org.gradle.api.internal.initialization.DefaultClassLoaderScope@cba4ccd
+classes: task ':classes'
+clean: task ':clean'
+clearPages: task ':clearPages'
+clonePagesRepo: task ':clonePagesRepo'
+compileJava: task ':compileJava'
+compileTestJava: task ':compileTestJava'
+components: SoftwareComponentInternal set
+configurationActions: org.gradle.configuration.project.DefaultProjectConfigurationActionContainer@6b9db80e
+configurationTargetIdentifier: org.gradle.configuration.ConfigurationTargetIdentifier$1@62dd168b
+configurations: configuration container
+convention: org.gradle.internal.extensibility.DefaultConvention@5b9e3213
+copyDocumentation: task ':copyDocumentation'
+copyJBakePagesForUse: task ':copyJBakePagesForUse'
+copyJBakeTemplates: task ':copyJBakeTemplates'
+copyReports: task ':copyReports'
+crossProjectModelAccess: org.gradle.api.internal.project.DefaultCrossProjectModelAccess@6317990a
+defaultArtifacts: extension 'defaultArtifacts'
+defaultTasks: []
+deferredProjectConfiguration: org.gradle.api.internal.project.DeferredProjectConfiguration@654c00ae
+dependencies: org.gradle.api.internal.artifacts.dsl.dependencies.DefaultDependencyHandler_Decorated@6f2f2bc2
+dependencyLocking: org.gradle.internal.locking.DefaultDependencyLockingHandler_Decorated@458b829e
+dependencyMetaDataProvider: org.gradle.internal.service.scopes.ProjectScopeServices$ProjectBackedModuleMetaDataProvider@1a8b8cec
+dependencyReport: task ':dependencyReport'
+depth: 0
+description: null
+detachedState: false
+displayName: root project 'webanalysis'
+distTar: task ':distTar'
+distZip: task ':distZip'
+distributions: Distribution container
+distsDirName: distributions
+distsDirectory: extension 'base' property 'distsDirectory'
+doAllTheCopying: task ':doAllTheCopying'
+docsDir: /Users/mariiavorobeva/Desktop/tuesday4/cs350-team4/build/docs
+docsDirName: docs
+executableDir: bin
+ext: org.gradle.internal.extensibility.DefaultExtraPropertiesExtension@1fc7b663
+extensions: org.gradle.internal.extensibility.DefaultConvention@5b9e3213
+fileOperations: org.gradle.api.internal.file.DefaultFileOperations@9a0ff62
+fileResolver: org.gradle.api.internal.file.BaseDirFileResolver@10a613ba
+gradle: build 'webanalysis'
+group: 
+htmlDependencyReport: task ':htmlDependencyReport'
+identityPath: :
+inheritedScope: org.gradle.internal.extensibility.ExtensibleDynamicObject$InheritedDynamicObject@560c01ae
+internalStatus: property(java.lang.Object, fixed(class java.lang.String, integration))
+jacoco: extension 'jacoco'
+jacocoAggregatedReport: task ':jacocoAggregatedReport'
+jacocoLogTestCoverage: task ':jacocoLogTestCoverage'
+jacocoTestReport: task ':jacocoTestReport'
+jar: task ':jar'
+java: extension 'java'
+javaToolchains: extension 'javaToolchains'
+javadoc: task ':javadoc'
+jbake: extension 'jbake'
+layout: org.gradle.api.internal.file.DefaultProjectLayout@745ac1a2
+libsDirName: libs
+libsDirectory: extension 'base' property 'libsDirectory'
+listenerBuildOperationDecorator: org.gradle.configuration.internal.DefaultListenerBuildOperationDecorator@7a0f6ba4
+logger: org.gradle.internal.logging.slf4j.OutputEventListenerBackedLogger@5a948c9c
+logging: org.gradle.internal.logging.services.DefaultLoggingManager@6c23f711
+mainClassName: null
+model: root project 'webanalysis'
+modelIdentityDisplayName: null
+modelRegistry: org.gradle.model.internal.registry.DefaultModelRegistry@4e566ce6
+name: webanalysis
+normalization: org.gradle.normalization.internal.DefaultInputNormalizationHandler_Decorated@4f856cc3
+objects: org.gradle.api.internal.model.DefaultObjectFactory@318bf9c3
+owner: root project 'webanalysis'
+parent: null
+parentIdentifier: null
+path: :
+pluginContext: false
+pluginManager: org.gradle.api.internal.plugins.DefaultPluginManager_Decorated@42e30b9c
+plugins: [org.gradle.api.plugins.HelpTasksPlugin@28522fa8, org.gradle.buildinit.plugins.BuildInitPlugin@56454544, org.gradle.buildinit.plugins.WrapperPlugin@7b481cb1, org.gradle.language.base.plugins.LifecycleBasePlugin@3bdd81da, org.gradle.api.plugins.BasePlugin@6fbdcfbb, org.gradle.api.plugins.JvmEcosystemPlugin@5ace6d11, org.gradle.api.plugins.ReportingBasePlugin@75544f98, org.gradle.api.plugins.JavaBasePlugin$Inject@59f28068, org.gradle.testing.base.plugins.TestSuiteBasePlugin@455fc7a7, org.gradle.api.plugins.JvmTestSuitePlugin@16149a25, org.gradle.api.plugins.JavaPlugin@588d336, org.gradle.api.distribution.plugins.DistributionPlugin@25e291f8, org.gradle.api.plugins.ApplicationPlugin@7f019a10, org.gradle.testing.jacoco.plugins.JacocoPlugin@71537010, org.barfuin.gradle.jacocolog.JacocoLogPlugin@75b99c6e, org.gradle.api.plugins.quality.PmdPlugin$Inject@1dee3d32, com.github.spotbugs.snom.SpotBugsBasePlugin@6079452e, com.github.spotbugs.snom.SpotBugsPlugin@2c96756a, org.gradle.api.plugins.quality.CheckstylePlugin$Inject@3d16a90c, org.gradle.api.plugins.ProjectReportsPlugin@2ad610be, org.jbake.gradle.JBakePlugin@49111769]
+pmd: extension 'pmd'
+pmdMain: task ':pmdMain'
+pmdTest: task ':pmdTest'
+processOperations: org.gradle.process.internal.DefaultExecActionFactory$DecoratingExecActionFactory@3faf6e7a
+processResources: task ':processResources'
+processTestResources: task ':processTestResources'
+project: root project 'webanalysis'
+projectConfigurator: org.gradle.api.internal.project.BuildOperationCrossProjectConfigurator@5b28fe38
+projectDir: /Users/mariiavorobeva/Desktop/tuesday4/cs350-team4
+projectEvaluationBroadcaster: ProjectEvaluationListener broadcast
+projectEvaluator: org.gradle.configuration.project.LifecycleProjectEvaluator@3583517f
+projectPath: :
+projectReport: task ':projectReport'
+projectReportDir: /Users/mariiavorobeva/Desktop/tuesday4/cs350-team4/build/reports/project
+projectReportDirName: project
+projects: [root project 'webanalysis']
+properties: {...}
+propertyReport: task ':propertyReport'
+providers: org.gradle.api.internal.provider.DefaultProviderFactory_Decorated@6f6613b8
+publicType: org.gradle.api.plugins.BasePluginConvention
+reporting: extension 'reporting'
+reports: task ':reports'
+reportsDir: /Users/mariiavorobeva/Desktop/tuesday4/cs350-team4/build/reports
+repositories: repository container
+resources: org.gradle.api.internal.resources.DefaultResourceHandler@2bfe6c90
+rootDir: /Users/mariiavorobeva/Desktop/tuesday4/cs350-team4
+rootProject: root project 'webanalysis'
+rootScript: false
+run: task ':run'
+script: false
+scriptHandlerFactory: org.gradle.api.internal.initialization.DefaultScriptHandlerFactory@373b9ee9
+scriptPluginFactory: org.gradle.configuration.ScriptPluginFactorySelector@189c29d8
+serviceRegistryFactory: org.gradle.internal.service.scopes.ProjectScopeServices$$Lambda$1866/0x0000000800fe9ce8@47b802a0
+services: ProjectScopeServices
+setUpWebsite: task ':setUpWebsite'
+sourceCompatibility: 11
+sourceSets: SourceSet container
+spotbugs: extension 'spotbugs'
+spotbugsMain: task ':spotbugsMain'
+spotbugsTest: task ':spotbugsTest'
+standardOutputCapture: org.gradle.internal.logging.services.DefaultLoggingManager@6c23f711
+state: project state 'EXECUTED'
+status: integration
+subprojects: [project ':app']
+targetCompatibility: 11
+taskReport: task ':taskReport'
+taskThatOwnsThisObject: null
+tasks: task set
+test: task ':test'
+testClasses: task ':testClasses'
+testReportDir: /Users/mariiavorobeva/Desktop/tuesday4/cs350-team4/build/reports/tests
+testReportDirName: tests
+testResultsDir: /Users/mariiavorobeva/Desktop/tuesday4/cs350-team4/build/test-results
+testResultsDirName: test-results
+testing: extension 'testing'
+updateGitHubPages: task ':updateGitHubPages'
+version: unspecified
