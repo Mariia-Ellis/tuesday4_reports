@@ -1,0 +1,514 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta charset="UTF-8"/>
+      <title>SpotBugs Report</title>
+      <style type="text/css">
+		.tablerow0 {
+			background: #EEEEEE;
+		}
+
+		.tablerow1 {
+			background: white;
+		}
+
+		.detailrow0 {
+			background: #EEEEEE;
+		}
+
+		.detailrow1 {
+			background: white;
+		}
+
+		.tableheader {
+			background: #b9b9fe;
+			font-size: larger;
+		}
+
+		.tablerow0:hover, .tablerow1:hover {
+			background: #aaffaa;
+		}
+
+		.priority-1 {
+				color: red;
+				font-weight: bold;
+		}
+		.priority-2 {
+				color: orange;
+				font-weight: bold;
+		}
+		.priority-3 {
+				color: green;
+				font-weight: bold;
+		}
+		.priority-4 {
+				color: blue;
+				font-weight: bold;
+		}
+		</style>
+      <script type="text/javascript">
+			function toggleRow(elid) {
+				if (document.getElementById) {
+					element = document.getElementById(elid);
+					if (element) {
+						if (element.style.display == 'none') {
+							element.style.display = 'block';
+							//window.status = 'Toggle on!';
+						} else {
+							element.style.display = 'none';
+							//window.status = 'Toggle off!';
+						}
+					}
+				}
+			}
+		</script>
+   </head>
+   <body>
+      <h1>
+         <a href="https://spotbugs.github.io/">SpotBugs</a> Report</h1>
+      <h2>Project Information</h2>
+      <p>Project: 
+		webanalysis (spotbugsMain)</p>
+      <p>SpotBugs version: 4.7.1</p>
+      <p>Code analyzed:</p>
+      <ul>
+         <li>/Users/mariiavorobeva/Desktop/tuesday4/cs350-team4/build/classes/java/main/edu/odu/cs/cs350/TargetType.class</li>
+         <li>/Users/mariiavorobeva/Desktop/tuesday4/cs350-team4/build/classes/java/main/edu/odu/cs/cs350/WebSite.class</li>
+         <li>/Users/mariiavorobeva/Desktop/tuesday4/cs350-team4/build/classes/java/main/edu/odu/cs/cs350/Classification.class</li>
+         <li>/Users/mariiavorobeva/Desktop/tuesday4/cs350-team4/build/classes/java/main/edu/odu/cs/cs350/WebsiteWalker.class</li>
+         <li>/Users/mariiavorobeva/Desktop/tuesday4/cs350-team4/build/classes/java/main/edu/odu/cs/cs350/Image.class</li>
+         <li>/Users/mariiavorobeva/Desktop/tuesday4/cs350-team4/build/classes/java/main/edu/odu/cs/cs350/HTMLDocument.class</li>
+         <li>/Users/mariiavorobeva/Desktop/tuesday4/cs350-team4/build/classes/java/main/edu/odu/cs/cs350/CLI.class</li>
+         <li>/Users/mariiavorobeva/Desktop/tuesday4/cs350-team4/build/classes/java/main/edu/odu/cs/cs350/DocumentParser.class</li>
+      </ul>
+      <p>
+         <br/>
+         <br/>
+      </p>
+      <h2>Metrics</h2>
+      <p>177 lines of code analyzed,
+	in 8 classes, 
+	in 1 packages.</p>
+      <table width="500" cellpadding="5" cellspacing="2">
+         <tr class="tableheader">
+            <th align="left">Metric</th>
+            <th align="right">Total</th>
+            <th align="right">Density*</th>
+         </tr>
+         <tr class="tablerow0">
+            <td>High Priority Warnings</td>
+            <td align="right">2</td>
+            <td align="right">11.30</td>
+         </tr>
+         <tr class="tablerow1">
+            <td>Medium Priority Warnings</td>
+            <td align="right">11</td>
+            <td align="right">62.15</td>
+         </tr>
+         <tr class="$totalClass">
+            <td>
+               <b>Total Warnings</b>
+            </td>
+            <td align="right">
+               <b>13</b>
+            </td>
+            <td align="right">
+               <b>73.45</b>
+            </td>
+         </tr>
+      </table>
+      <p>
+         <i>(* Defects per Thousand lines of non-commenting source statements)</i>
+      </p>
+      <p>
+         <br/>
+         <br/>
+      </p>
+      <h2>Contents</h2>
+      <ul>
+         <li>
+            <a href="#Warnings_BAD_PRACTICE">Bad practice Warnings</a>
+         </li>
+         <li>
+            <a href="#Warnings_CORRECTNESS">Correctness Warnings</a>
+         </li>
+         <li>
+            <a href="#Warnings_MALICIOUS_CODE">Malicious code vulnerability Warnings</a>
+         </li>
+         <li>
+            <a href="#Warnings_PERFORMANCE">Performance Warnings</a>
+         </li>
+         <li>
+            <a href="#Warnings_STYLE">Dodgy code Warnings</a>
+         </li>
+         <li>
+            <a href="#Details">Details</a>
+         </li>
+      </ul>
+      <h1>Summary</h1>
+      <table width="500" cellpadding="5" cellspacing="2">
+         <tr class="tableheader">
+            <th align="left">Warning Type</th>
+            <th align="right">Number</th>
+         </tr>
+         <tr class="tablerow0">
+            <td>
+               <a href="#Warnings_BAD_PRACTICE">Bad practice Warnings</a>
+            </td>
+            <td align="right">2</td>
+         </tr>
+         <tr class="tablerow1">
+            <td>
+               <a href="#Warnings_CORRECTNESS">Correctness Warnings</a>
+            </td>
+            <td align="right">3</td>
+         </tr>
+         <tr class="tablerow0">
+            <td>
+               <a href="#Warnings_MALICIOUS_CODE">Malicious code vulnerability Warnings</a>
+            </td>
+            <td align="right">5</td>
+         </tr>
+         <tr class="tablerow1">
+            <td>
+               <a href="#Warnings_PERFORMANCE">Performance Warnings</a>
+            </td>
+            <td align="right">2</td>
+         </tr>
+         <tr class="tablerow0">
+            <td>
+               <a href="#Warnings_STYLE">Dodgy code Warnings</a>
+            </td>
+            <td align="right">1</td>
+         </tr>
+         <tr class="tablerow1">
+            <td>
+               <b>Total</b>
+            </td>
+            <td align="right">
+               <b>13</b>
+            </td>
+         </tr>
+      </table>
+      <h1>Warnings</h1>
+      <p>Click on a warning row to see full context information.</p>
+      <h2>
+         <a name="Warnings_BAD_PRACTICE">Bad practice Warnings</a>
+      </h2>
+      <table class="warningtable" width="100%" cellspacing="0">
+         <tr class="tableheader">
+            <th align="left">Code</th>
+            <th align="left">Warning</th>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d2e137');">
+            <td>
+               <span class="priority-2">HE</span>
+            </td>
+            <td>edu.odu.cs.cs350.HTMLDocument defines equals and uses Object.hashCode()</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d2e137" style="display: none;">
+                  <a href="#HE_EQUALS_USE_HASHCODE">Bug type HE_EQUALS_USE_HASHCODE (click for details)</a>
+                  <br/>In class edu.odu.cs.cs350.HTMLDocument<br/>In method edu.odu.cs.cs350.HTMLDocument.equals(HTMLDocument)<br/>At HTMLDocument.java:[lines 93-97]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d2e168');">
+            <td>
+               <span class="priority-2">Nm</span>
+            </td>
+            <td>The method name edu.odu.cs.cs350.WebSite.AddPage(HTMLDocument) doesn't start with a lower case letter</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d2e168" style="display: none;">
+                  <a href="#NM_METHOD_NAMING_CONVENTION">Bug type NM_METHOD_NAMING_CONVENTION (click for details)</a>
+                  <br/>In class edu.odu.cs.cs350.WebSite<br/>In method edu.odu.cs.cs350.WebSite.AddPage(HTMLDocument)<br/>At WebSite.java:[lines 91-92]</p>
+            </td>
+         </tr>
+      </table>
+      <h2>
+         <a name="Warnings_CORRECTNESS">Correctness Warnings</a>
+      </h2>
+      <table class="warningtable" width="100%" cellspacing="0">
+         <tr class="tableheader">
+            <th align="left">Code</th>
+            <th align="left">Warning</th>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d2e125');">
+            <td>
+               <span class="priority-2">Eq</span>
+            </td>
+            <td>edu.odu.cs.cs350.HTMLDocument defines equals(HTMLDocument) method and uses Object.equals(Object)</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d2e125" style="display: none;">
+                  <a href="#EQ_SELF_USE_OBJECT">Bug type EQ_SELF_USE_OBJECT (click for details)</a>
+                  <br/>In class edu.odu.cs.cs350.HTMLDocument<br/>In method edu.odu.cs.cs350.HTMLDocument.equals(HTMLDocument)<br/>At HTMLDocument.java:[lines 93-97]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d2e47');">
+            <td>
+               <span class="priority-1">IL</span>
+            </td>
+            <td>There is an apparent infinite recursive loop in edu.odu.cs.cs350.CLI.fileExtention()</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d2e47" style="display: none;">
+                  <a href="#IL_INFINITE_RECURSIVE_LOOP">Bug type IL_INFINITE_RECURSIVE_LOOP (click for details)</a>
+                  <br/>In class edu.odu.cs.cs350.CLI<br/>In method edu.odu.cs.cs350.CLI.fileExtention()<br/>At CLI.java:[line 149]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d2e59');">
+            <td>
+               <span class="priority-1">IL</span>
+            </td>
+            <td>There is an apparent infinite recursive loop in edu.odu.cs.cs350.CLI.fileSummary()</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d2e59" style="display: none;">
+                  <a href="#IL_INFINITE_RECURSIVE_LOOP">Bug type IL_INFINITE_RECURSIVE_LOOP (click for details)</a>
+                  <br/>In class edu.odu.cs.cs350.CLI<br/>In method edu.odu.cs.cs350.CLI.fileSummary()<br/>At CLI.java:[line 143]</p>
+            </td>
+         </tr>
+      </table>
+      <h2>
+         <a name="Warnings_MALICIOUS_CODE">Malicious code vulnerability Warnings</a>
+      </h2>
+      <table class="warningtable" width="100%" cellspacing="0">
+         <tr class="tableheader">
+            <th align="left">Code</th>
+            <th align="left">Warning</th>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d2e13');">
+            <td>
+               <span class="priority-2">EI</span>
+            </td>
+            <td>edu.odu.cs.cs350.CLI.getSiteURLs() may expose internal representation by returning CLI.siteURLs</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d2e13" style="display: none;">
+                  <a href="#EI_EXPOSE_REP">Bug type EI_EXPOSE_REP (click for details)</a>
+                  <br/>In class edu.odu.cs.cs350.CLI<br/>In method edu.odu.cs.cs350.CLI.getSiteURLs()<br/>Field edu.odu.cs.cs350.CLI.siteURLs<br/>At CLI.java:[line 80]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d2e91');">
+            <td>
+               <span class="priority-2">EI</span>
+            </td>
+            <td>edu.odu.cs.cs350.HTMLDocument.getImages() may expose internal representation by returning HTMLDocument.images</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d2e91" style="display: none;">
+                  <a href="#EI_EXPOSE_REP">Bug type EI_EXPOSE_REP (click for details)</a>
+                  <br/>In class edu.odu.cs.cs350.HTMLDocument<br/>In method edu.odu.cs.cs350.HTMLDocument.getImages()<br/>Field edu.odu.cs.cs350.HTMLDocument.images<br/>At HTMLDocument.java:[line 44]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d2e29');">
+            <td>
+               <span class="priority-2">EI2</span>
+            </td>
+            <td>edu.odu.cs.cs350.CLI.setSiteURLs(List) may expose internal representation by storing an externally mutable object into CLI.siteURLs</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d2e29" style="display: none;">
+                  <a href="#EI_EXPOSE_REP2">Bug type EI_EXPOSE_REP2 (click for details)</a>
+                  <br/>In class edu.odu.cs.cs350.CLI<br/>In method edu.odu.cs.cs350.CLI.setSiteURLs(List)<br/>Field edu.odu.cs.cs350.CLI.siteURLs<br/>Local variable named siteURLs<br/>At CLI.java:[line 95]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d2e107');">
+            <td>
+               <span class="priority-2">EI2</span>
+            </td>
+            <td>edu.odu.cs.cs350.HTMLDocument.setImages(List) may expose internal representation by storing an externally mutable object into HTMLDocument.images</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d2e107" style="display: none;">
+                  <a href="#EI_EXPOSE_REP2">Bug type EI_EXPOSE_REP2 (click for details)</a>
+                  <br/>In class edu.odu.cs.cs350.HTMLDocument<br/>In method edu.odu.cs.cs350.HTMLDocument.setImages(List)<br/>Field edu.odu.cs.cs350.HTMLDocument.images<br/>Local variable named images<br/>At HTMLDocument.java:[line 51]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d2e149');">
+            <td>
+               <span class="priority-2">EI2</span>
+            </td>
+            <td>edu.odu.cs.cs350.WebSite.setSiteURLs(List) may expose internal representation by storing an externally mutable object into WebSite.siteURLs</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d2e149" style="display: none;">
+                  <a href="#EI_EXPOSE_REP2">Bug type EI_EXPOSE_REP2 (click for details)</a>
+                  <br/>In class edu.odu.cs.cs350.WebSite<br/>In method edu.odu.cs.cs350.WebSite.setSiteURLs(List)<br/>Field edu.odu.cs.cs350.WebSite.siteURLs<br/>Local variable named urls<br/>At WebSite.java:[line 70]</p>
+            </td>
+         </tr>
+      </table>
+      <h2>
+         <a name="Warnings_PERFORMANCE">Performance Warnings</a>
+      </h2>
+      <table class="warningtable" width="100%" cellspacing="0">
+         <tr class="tableheader">
+            <th align="left">Code</th>
+            <th align="left">Warning</th>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d2e180');">
+            <td>
+               <span class="priority-2">UuF</span>
+            </td>
+            <td>Unused field: edu.odu.cs.cs350.WebsiteWalker.parser</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d2e180" style="display: none;">
+                  <a href="#UUF_UNUSED_FIELD">Bug type UUF_UNUSED_FIELD (click for details)</a>
+                  <br/>In class edu.odu.cs.cs350.WebsiteWalker<br/>Field edu.odu.cs.cs350.WebsiteWalker.parser<br/>In WebsiteWalker.java</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d2e193');">
+            <td>
+               <span class="priority-2">UuF</span>
+            </td>
+            <td>Unused field: edu.odu.cs.cs350.WebsiteWalker.websiteCopy</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d2e193" style="display: none;">
+                  <a href="#UUF_UNUSED_FIELD">Bug type UUF_UNUSED_FIELD (click for details)</a>
+                  <br/>In class edu.odu.cs.cs350.WebsiteWalker<br/>Field edu.odu.cs.cs350.WebsiteWalker.websiteCopy<br/>In WebsiteWalker.java</p>
+            </td>
+         </tr>
+      </table>
+      <h2>
+         <a name="Warnings_STYLE">Dodgy code Warnings</a>
+      </h2>
+      <table class="warningtable" width="100%" cellspacing="0">
+         <tr class="tableheader">
+            <th align="left">Code</th>
+            <th align="left">Warning</th>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d2e71');">
+            <td>
+               <span class="priority-2">BC</span>
+            </td>
+            <td>instanceof will always return true for all non-null values in edu.odu.cs.cs350.HTMLDocument.equals(HTMLDocument), since all edu.odu.cs.cs350.HTMLDocument are instances of edu.odu.cs.cs350.HTMLDocument</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d2e71" style="display: none;">
+                  <a href="#BC_VACUOUS_INSTANCEOF">Bug type BC_VACUOUS_INSTANCEOF (click for details)</a>
+                  <br/>In class edu.odu.cs.cs350.HTMLDocument<br/>In method edu.odu.cs.cs350.HTMLDocument.equals(HTMLDocument)<br/>Actual type edu.odu.cs.cs350.HTMLDocument<br/>Expected edu.odu.cs.cs350.HTMLDocument<br/>At HTMLDocument.java:[line 93]</p>
+            </td>
+         </tr>
+      </table>
+      <h1>
+         <a name="Details">Details</a>
+      </h1>
+      <h2>
+         <a name="BC_VACUOUS_INSTANCEOF">BC_VACUOUS_INSTANCEOF: instanceof will always return true</a>
+      </h2>
+
+<p>
+This instanceof test will always return true (unless the value being tested is null).
+Although this is safe, make sure it isn't
+an indication of some misunderstanding or some other logic error.
+If you really want to test the value for being null, perhaps it would be clearer to do
+better to do a null test rather than an instanceof test.
+</p>
+
+    <h2>
+         <a name="EI_EXPOSE_REP">EI_EXPOSE_REP: May expose internal representation by returning reference to mutable object</a>
+      </h2>
+
+  <p> Returning a reference to a mutable object value stored in one of the object's fields
+  exposes the internal representation of the object.&nbsp;
+   If instances
+   are accessed by untrusted code, and unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Returning a new copy of the object is better approach in many situations.</p>
+
+    <h2>
+         <a name="EI_EXPOSE_REP2">EI_EXPOSE_REP2: May expose internal representation by incorporating reference to mutable object</a>
+      </h2>
+
+  <p> This code stores a reference to an externally mutable object into the
+  internal representation of the object.&nbsp;
+   If instances
+   are accessed by untrusted code, and unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Storing a copy of the object is better approach in many situations.</p>
+
+    <h2>
+         <a name="EQ_SELF_USE_OBJECT">EQ_SELF_USE_OBJECT: Covariant equals() method defined, Object.equals(Object) inherited</a>
+      </h2>
+
+  <p> This class defines a covariant version of the <code>equals()</code>
+  method, but inherits the normal <code>equals(Object)</code> method
+  defined in the base <code>java.lang.Object</code> class.&nbsp;
+  The class should probably define a <code>boolean equals(Object)</code> method.
+  </p>
+
+    <h2>
+         <a name="HE_EQUALS_USE_HASHCODE">HE_EQUALS_USE_HASHCODE: Class defines equals() and uses Object.hashCode()</a>
+      </h2>
+
+  <p> This class overrides <code>equals(Object)</code>, but does not
+  override <code>hashCode()</code>, and inherits the implementation of
+  <code>hashCode()</code> from <code>java.lang.Object</code> (which returns
+  the identity hash code, an arbitrary value assigned to the object
+  by the VM).&nbsp; Therefore, the class is very likely to violate the
+  invariant that equal objects must have equal hashcodes.</p>
+
+<p>If you don't think instances of this class will ever be inserted into a HashMap/HashTable,
+the recommended <code>hashCode</code> implementation to use is:</p>
+<pre><code>public int hashCode() {
+    assert false : "hashCode not designed";
+    return 42; // any arbitrary constant will do
+}
+</code></pre>
+
+    <h2>
+         <a name="IL_INFINITE_RECURSIVE_LOOP">IL_INFINITE_RECURSIVE_LOOP: An apparent infinite recursive loop</a>
+      </h2>
+
+<p>This method unconditionally invokes itself. This would seem to indicate
+an infinite recursive loop that will result in a stack overflow.</p>
+
+    <h2>
+         <a name="NM_METHOD_NAMING_CONVENTION">NM_METHOD_NAMING_CONVENTION: Method names should start with a lower case letter</a>
+      </h2>
+
+  <p>
+Methods should be verbs, in mixed case with the first letter lowercase, with the first letter of each internal word capitalized.
+</p>
+
+    <h2>
+         <a name="UUF_UNUSED_FIELD">UUF_UNUSED_FIELD: Unused field</a>
+      </h2>
+
+  <p> This field is never used.&nbsp; Consider removing it from the class.</p>
+
+    </body>
+</html>
