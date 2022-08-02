@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>HTMLDocument.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">webanalysis</a> &gt; <a href="index.source.html" class="el_package">edu.odu.cs.cs350</a> &gt; <span class="el_source">HTMLDocument.java</span></div><h1>HTMLDocument.java</h1><pre class="source lang-java linenums">/**
+ * 
+ */
+package edu.odu.cs.cs350;
+
+import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+
+/**
+ * HTMLDocument represents an HTML page of a website.
+ */
+public class HTMLDocument {
+    
+    private Path localPath;
+    private List&lt;Image&gt; images;
+    
+    /**
+     * Create an empty HTML object with localPath set to null
+     * and empty set of collection of images
+     */
+    public HTMLDocument()
+<span class="fc" id="L24">    {</span>
+<span class="fc" id="L25">        localPath = null;</span>
+<span class="fc" id="L26">        images = new ArrayList&lt;Image&gt;();</span>
+<span class="fc" id="L27">    }</span>
+    
+    /**
+     * Create an empty HTML object with localPath set to @param
+     * and empty set of collection of images.
+     * @param newPath is a path of image
+     */
+    public HTMLDocument(Path newPath)
+<span class="fc" id="L35">    {</span>
+<span class="fc" id="L36">        localPath = newPath;</span>
+<span class="fc" id="L37">        images = new ArrayList&lt;Image&gt;();</span>
+<span class="fc" id="L38">    }</span>
+
+    /**
+     * @return the images
+     */
+    public List&lt;Image&gt; getImages() {
+<span class="nc" id="L44">        return images;</span>
+    }
+
+    /**
+     * @param images the images to set
+     */
+    public void setImages(List&lt;Image&gt; images) {
+<span class="nc" id="L51">        this.images = images;</span>
+<span class="nc" id="L52">    }</span>
+
+    /**
+     * @return the localPath
+     */
+    public Path getLocalPath() {
+<span class="fc" id="L58">        return localPath;</span>
+    }
+
+    /**
+     * @param localPath the localPath to set
+     */
+    public void setLocalPath(Path localPath) {
+<span class="fc" id="L65">        this.localPath = localPath;</span>
+<span class="fc" id="L66">    }</span>
+    /*
+     * returns number of images in collection
+     */
+    public int numberOfImages()
+    {
+<span class="fc" id="L72">        return images.size();</span>
+    }
+    
+    /*
+     * An image can be added to collection of images only once
+     * @param newImage is image object to be added to collection of images
+     */
+    public boolean addImage(Image newImage)
+    {
+<span class="pc bpc" id="L81" title="1 of 2 branches missed.">        if(images.contains(newImage))</span>
+        {
+<span class="nc" id="L83">            return false;</span>
+        }
+        
+<span class="fc" id="L86">        images.add(newImage);</span>
+<span class="fc" id="L87">        return true;</span>
+    }
+    
+
+    public boolean equals(HTMLDocument rhs)
+    {
+<span class="nc bnc" id="L93" title="All 2 branches missed.">        if(!(rhs instanceof HTMLDocument)){</span>
+<span class="nc" id="L94">            return false;</span>
+        }
+        //not implemented
+<span class="nc" id="L97">        return false;</span>
+
+    }
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>
